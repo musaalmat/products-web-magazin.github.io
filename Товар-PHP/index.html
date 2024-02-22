@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заказа</title>
+    <link  href="index.css"  rel="stylesheet">
+    <link  href="page2.html" >
+</head>
+<body>
+    <form action="https://sheetdb.io/api/v1/wr4vk24pc7rht" method="post" id="sheetdb-form"  >
+        <div class="container">
+          <h1>Форма заказа</h1>
+          <h2>PHP книга</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Карточки товара</title>
+<style>
+.card {
+  border: 1px solid #A9A9A9;
+  border-radius: 10px;
+  padding: 25px;
+  width: 260px;
+  margin: 0px;
+  display: inline-block;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card h3 {
+  margin-top: 10px;
+}
+
+.card p {
+  margin-top: 5px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="card">
+  <img src="php book.png" alt="Фото товара">
+  <h1 style="color: #000">Цена: 1000тг</h1>
+  <h2 style="color: #000">Артикул товара: 3</h2>
+</div>
+
+
+
+         
+          <h1>ㅤ</h1>
+      
+          <label for="email"><b>Введите свое имя</b></label>
+          <input type="text" placeholder="Введите свое имя" name="data[Имя]" required>
+
+
+
+          <label for="email"><b>Введите свою почту</b></label>
+          <input type="text" placeholder="Введите свою почту" name="data[Почта]" required>
+
+
+          <label for="email"><b>Введите свой номер</b></label>
+          <input type="text" placeholder="Введите свой номер" name="data[Тел]" required>
+
+
+          <label for="email"><b>Введите артикул товара</b></label>
+          <input type="text" placeholder="Введите артикул товара" name="data[Артикул]" required>
+
+
+          <label for="email"><b>Введите количетво товара</b></label>
+          <input type="text" placeholder="Введите количетво товара" name="data[Количество]" required>
+
+
+          
+
+          
+
+
+    
+
+
+
+
+
+
+
+
+
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+      
+          <p>Проблемы с заполнением заказа?<br>Заходите по ссылке <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      
+          <div class="clearfix">
+            <button type="submit" class="signupbtn">Оформить заказ</button>
+          </div>
+        </div>
+      </form>
+
+
+
+        <script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('page2.html', '_blank');
+
+          });
+        });
+        </script>
+        
+
+
+</body>
+</html>
